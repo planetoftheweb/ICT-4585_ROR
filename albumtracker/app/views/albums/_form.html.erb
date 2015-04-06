@@ -12,22 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :albumtitle %><br>
-    <%= f.text_field :albumtitle %>
+    <%= f.label :album_title %><br>
+    <%= f.text_field :album_title %>
   </div>
   <div class="field">
     <%= f.label :genre %><br>
     <%= f.text_field :genre %>
   </div>
   <div class="field">
-    <%= f.label :yearreleased %><br>
-    <%= f.number_field :yearreleased %>
+    <%= f.label :year_released %><br>
+    <%= f.number_field :year_released %>
   </div>
   <div class="field">
-    <%= f.label :dateadded %><br>
-    <%= f.date_select :dateadded %>
+    <%= f.label :date_added %><br>
+    <%= f.date_select :date_added %>
+  </div>
+  <div class="field">
+    <%= f.label :times_played %><br>
+    <%= f.number_field :times_played %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-success" %>
   </div>
 <% end %>

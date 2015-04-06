@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150406004135) do
+ActiveRecord::Schema.define(version: 20150406015553) do
 
   create_table "albums", force: :cascade do |t|
-    t.string   "albumtitle"
+    t.string   "album_title"
     t.string   "genre"
-    t.integer  "yearreleased"
-    t.date     "dateadded"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "year_released"
+    t.date     "date_added"
+    t.integer  "times_played"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

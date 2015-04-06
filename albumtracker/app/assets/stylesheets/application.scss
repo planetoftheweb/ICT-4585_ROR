@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$background: darken($cyan, 5);
+$foreground: lighten($yellow, 25);
+
+/**  Basic Page CSS **/
+
+html { font-size: 62.5%; }
+
+body{
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  position: relative;
+	background-color: $background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+.header {
+	background-color: $background;
+	padding: 50px 0;
+}
+
+.header h1{
+	font-size: 6rem;
+	color: $foreground;
+}
+
+.header h2{
+	font-family: 'Roboto Slab';
+	font-weight: 300;
+	color: $foreground;
+}
+
+.header .language {
+	font-family: 'Roboto Slab';
+	color: #F9B640;
+	font-size: 3rem;
+}
+
+.header .language img {
+  width: 50px;
+  vertical-align: 0px;
+}
+
+
+.header .branding{
+	margin: 0 auto;
+}
+
+.header .branding .logo{
+	width: 10%;
+	min-width: 100px;
+	padding-right: 10px;
+	float: left;
+}
+
+.main {
+	background-color: #FDF6E4;
+	padding: 50px 0;
+	font-size: 2.5rem;
+}
+
+.main figcaption {
+	text-align: center;
+	font-weight: bold;
+	color: #C94C24;
+}
+
+.center {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dateselector form {
+	font-size: 1.8rem;
+	color: #E76C5A;
+	margin: 20px 0;
+}
+
+.dateselector input[type="date"] {
+	background-color: #FDF6E4;
+}
+
+
+.footer {
+  font-family: "Open Sans", sans-serif;
+	color: #EEE8D6;
+	margin-top: 20px;
+}
+
+.footer h2 {
+	font-size: 2rem;
+	color: #EEC857;
+	margin-bottom: 10px;
+}
+.footer p {
+	font-size: 1.5rem;
+}
+
+.table-hover>tbody>tr:hover {
+	background-color: lighten($yellow, 40);
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+	background-color: lighten($yellow, 50);
+}
+
+a.btn:visited {
+	color: lighten($yellow, 50);
+}

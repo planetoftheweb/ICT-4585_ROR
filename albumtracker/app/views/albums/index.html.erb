@@ -2,13 +2,14 @@
 
 <h1>Listing Albums</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Albumtitle</th>
+      <th>Album title</th>
       <th>Genre</th>
-      <th>Yearreleased</th>
-      <th>Dateadded</th>
+      <th>Year released</th>
+      <th>Date added</th>
+      <th>Times played</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +17,14 @@
   <tbody>
     <% @albums.each do |album| %>
       <tr>
-        <td><%= album.albumtitle %></td>
+        <td><%= album.album_title %></td>
         <td><%= album.genre %></td>
-        <td><%= album.yearreleased %></td>
-        <td><%= album.dateadded %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= album.year_released %></td>
+        <td><%= album.date_added %></td>
+        <td><%= album.times_played %></td>
+        <td><%= link_to 'Show', album, :class => "btn btn-sm btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_album_path(album), :class => "btn btn-sm btn-info" %></td>
+        <td><%= link_to 'Destroy', album, :class => "btn btn-sm btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Album', new_album_path %>
+<%= link_to 'New Album', new_album_path, :class => "btn btn-warning" %>

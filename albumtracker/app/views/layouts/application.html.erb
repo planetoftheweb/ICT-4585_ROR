@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Albumtracker</title>
+  <title>Studentapp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header class="header">
+    <div class="branding container">
+      <div class="body">
+        <h1><i class="fa fa-headphones"></i> Funky Albums</h1>
+        <h2>Exploring the best music since the 70's</h2>
+      </div>
+    </div>
+  </header>
+  <div class="main">
+    <div class="container">
 <%= yield %>
 
+    </div><!-- container -->
+  </div><!-- main -->
+  <footer class="footer container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>About FunkyList</h2>
+      </div>
+    </div>
+    <div class="row">
+      <p class="col-md-12">Get your funk on with our new Music App.</p>
+    </div>
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
