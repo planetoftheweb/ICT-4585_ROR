@@ -17,7 +17,9 @@
   </div>
   <div class="field">
     <%= f.label :advisor_id %><br>
-    <%= f.text_field :advisor_id %>
+    <%= f.select(:advisor_id,
+        options_from_collection_for_select(Advisor.all,
+            :id, :name)) %>
   </div>
   <div class="actions">
     <%= f.submit %>
