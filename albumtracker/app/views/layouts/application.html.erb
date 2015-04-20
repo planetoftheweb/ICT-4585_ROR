@@ -12,12 +12,23 @@
   <header class="header">
     <div class="branding container">
       <div class="body">
-        <h1><i class="fa fa-headphones"></i> Funky Albums</h1>
+        <h1><a href="/"><i class="fa fa-headphones"></i> Funky Albums</a></h1>
         <h2>Exploring the best music since the 70's</h2>
       </div>
     </div>
   </header>
   <div class="main">
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Albums</a></li>
+              <li><a href="/labels">Labels</a></li>
+            </ul>
+        </div><!-- /.container-fluid -->
+      </nav>
+
+
     <div class="container">
 <%= yield %>
 

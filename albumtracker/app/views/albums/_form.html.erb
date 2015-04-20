@@ -15,6 +15,14 @@
     <%= f.label :album_title %><br>
     <%= f.text_field :album_title %>
   </div>
+
+  <div class="field">
+    <%= f.label :label_id %><br>
+    <%= f.select(:label_id,
+        options_from_collection_for_select(Label.all, :id, :name)) %>
+  </div>
+
+
   <div class="field">
     <%= f.label :genre %><br>
     <%= f.text_field :genre %>
