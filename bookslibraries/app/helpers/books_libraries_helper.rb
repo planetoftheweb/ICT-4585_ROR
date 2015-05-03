@@ -1,2 +1,0 @@
-module BooksLibrariesHelper
-end
