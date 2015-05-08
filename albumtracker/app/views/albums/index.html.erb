@@ -7,6 +7,7 @@
     <tr>
       <th>Album title</th>
       <th>Genre</th>
+      <th>Artist</th>
       <th>Label</th>
       <th>Year released</th>
       <th>Date added</th>
@@ -20,6 +21,7 @@
       <tr>
         <td><%= album.album_title %></td>
         <td><%= album.genre %></td>
+        <td><%= album.artist.name if album.artist %></td>
         <td><%= album.label.name if album.label %></td>
         <td><%= album.year_released %></td>
         <td><%= album.date_added %></td>

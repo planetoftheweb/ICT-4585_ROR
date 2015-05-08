@@ -4,11 +4,6 @@
   <strong>Name:</strong>
   <%= @label.name %>
 
-  <ol>
-      <% @label.albums.each do |album| %>
-      <li><%= album.name %></li>
-      <% end %>
-  </ol>
 </p>
 
 <%= link_to 'Edit', edit_label_path(@label), :class => "btn btn-success" %> |

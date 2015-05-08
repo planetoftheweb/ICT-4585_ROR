@@ -22,23 +22,32 @@
         options_from_collection_for_select(Label.all, :id, :name)) %>
   </div>
 
+  <div class="field">
+    <%= f.label :artist_id %><br>
+    <%= f.select(:artist_id,
+        options_from_collection_for_select(Artist.all, :id, :name)) %>
+  </div>
 
   <div class="field">
     <%= f.label :genre %><br>
     <%= f.text_field :genre %>
   </div>
+
   <div class="field">
     <%= f.label :year_released %><br>
     <%= f.number_field :year_released %>
   </div>
+
   <div class="field">
     <%= f.label :date_added %><br>
     <%= f.date_select :date_added %>
   </div>
+
   <div class="field">
     <%= f.label :times_played %><br>
     <%= f.number_field :times_played %>
   </div>
+
   <div class="actions">
     <%= f.submit :class => "btn btn-success" %>
   </div>

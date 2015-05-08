@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420004416) do
+ActiveRecord::Schema.define(version: 20150508190449) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "album_title"
@@ -22,9 +22,45 @@ ActiveRecord::Schema.define(version: 20150420004416) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "label_id"
+    t.integer  "artist_id"
   end
 
+  add_index "albums", ["artist_id"], name: "index_albums_on_artist_id"
+
+  create_table "albums_artists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "books_libraries", force: :cascade do |t|
+    t.integer  "book_id"
+    t.integer  "library_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "books_libraries", ["book_id"], name: "index_books_libraries_on_book_id"
+  add_index "books_libraries", ["library_id"], name: "index_books_libraries_on_library_id"
+
   create_table "labels", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "libraries", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
