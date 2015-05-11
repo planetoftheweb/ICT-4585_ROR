@@ -145,6 +145,11 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.5rem;
 }
 
+.table th {
+  font-size: .7em;
+}
+
+
 .table-hover>tbody>tr:hover {
 	background-color: lighten($yellow, 40);
 }
