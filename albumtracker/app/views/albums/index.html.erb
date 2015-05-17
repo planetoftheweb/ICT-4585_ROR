@@ -21,8 +21,8 @@
       <tr>
         <td><%= album.album_title %></td>
         <td><%= album.genre %></td>
-        <td><%= album.artist.name if album.artist %></td>
-        <td><%= album.label.name if album.label %></td>
+        <td class="tablelink"><%= link_to album.artist.name, artist_path(album.artist_id) if album.artist %></td>
+        <td class="tablelink"><%= link_to album.label.name, artist_path(album.label) if album.label %></td>
         <td><%= album.year_released %></td>
         <td><%= album.date_added %></td>
         <td><%= album.times_played %></td>

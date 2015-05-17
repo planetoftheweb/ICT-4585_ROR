@@ -22,9 +22,9 @@
       <nav class="navbar navbar-default">
         <div class="container">
             <ul class="nav navbar-nav">
-              <li><a href="/">Albums</a></li>
-              <li><a href="/artists">Artists</a></li>
-              <li><a href="/labels">Labels</a></li>
+              <li><%= link_to('Albums', {:controller => 'albums'}) %></li>
+              <li><%= link_to('Artist', {:controller => 'artists'}) %></li>
+              <li><%= link_to('Label', {:controller => 'labels'}) %></li>
             </ul>
         </div><!-- /.container-fluid -->
       </nav>

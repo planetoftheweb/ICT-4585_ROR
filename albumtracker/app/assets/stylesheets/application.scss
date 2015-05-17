@@ -150,6 +150,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.tablelink {
+
+  a, a:link, a:visited {
+    text-decoration: underline;
+    color: $orange;
+  }
+
+  & a:hover {
+    color: $violet;
+    background: transparent;
+  }
+
+}
+
 .table-hover>tbody>tr:hover {
 	background-color: lighten($yellow, 40);
 }
