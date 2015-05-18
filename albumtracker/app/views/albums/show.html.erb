@@ -1,39 +1,35 @@
-<p id="notice"><%= notice %></p>
+<%= render 'nav' %>
 
+<div class="container">
+<p id="notice"><%= notice %></p>
 <p>
   <strong>Album title:</strong>
   <%= @album.album_title %>
 </p>
-
 <p>
   <strong>Genre:</strong>
   <%= @album.genre %>
 </p>
-
 <p>
   <strong>Year released:</strong>
   <%= @album.year_released %>
 </p>
-
 <p>
   <strong>Label:</strong>
   <%= @album.label.name %>
 </p>
-
 <p>
   <strong>Artist:</strong>
   <%= @album.artist.name if @album.artist %>
 </p>
-
 <p>
   <strong>Date added:</strong>
   <%= @album.date_added %>
 </p>
-
 <p>
   <strong>Times played:</strong>
   <%= @album.times_played %>
 </p>
-
 <%= link_to 'Edit', edit_album_path(@album), :class => "btn btn-success" %> |
 <%= link_to 'Back', albums_path, :class => "btn btn-success" %>
+</div>

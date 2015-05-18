@@ -183,6 +183,7 @@ a.btn:visited {
     margin: 0;
     font-size: 3em !important;
 }
+
 .navbar {
     border-radius: 0;
 }
@@ -190,4 +191,15 @@ a.btn:visited {
 .navbar-nav>li>a {
     font-size: 1.5em !important;
     color: white !important;
+    &:hover {
+      background-color: $orange !important;
+    }
+}
+
+.navbar-default .navbar-nav>.active>a {
+  background-color: $orange;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: $yellow;
 }

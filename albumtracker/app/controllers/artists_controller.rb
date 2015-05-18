@@ -7,6 +7,11 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
 
+  def search
+    @artists = Artist.where("name like ?", "%#{params[:q]}%")
+    render :index
+  end
+
   # GET /artists/1
   # GET /artists/1.json
   def show

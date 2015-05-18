@@ -1,10 +1,17 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
 
+  http_basic_authenticate_with name: "ray", password: "railsbad"
+
   # GET /albums
   # GET /albums.json
   def index
     @albums = Album.all
+  end
+
+  def search
+    @albums = Album.where("album_title like ?", "%#{params[:q]}%")
+    render :index
   end
 
   # GET /albums/1

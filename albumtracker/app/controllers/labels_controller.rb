@@ -7,6 +7,11 @@ class LabelsController < ApplicationController
     @labels = Label.all
   end
 
+  def search
+    @labels = Label.where("name like ?", "%#{params[:q]}%")
+    render :index
+  end
+
   # GET /labels/1
   # GET /labels/1.json
   def show
